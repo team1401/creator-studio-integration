@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "verified_at_utc": "2026-10-22T16:00:54.070639+00:00",
+  "worker": {
+    "id": "agent-zero-1",
+    "base_url": "http://100.108.186.69:50080",
+    "version": "v2.14",
+    "authentication": "server-side vault login session plus CSRF",
+    "api_family": "installed Web UI API"
+  },
+  "capabilities": {
+    "authenticated_send": true,
+    "poll": true,
+    "dedicated_context_pause": true,
+    "dedicated_context_resume": true,
+    "file_artifact_verified": true,
+    "open_worker_ui": true,
+    "desktop_software_installed": true,
+    "live_desktop_available": false,
+    "automatic_dispatch_ready": false,
+    "supervised_dispatch_prototype_verified": true
+  },
+  "verified_urls": [
+    {
+      "url": "http://100.108.186.69:50080/",
+      "authenticated_http": 200,
+      "anonymous_http": 302,
+      "available": true
+    }
+  ],
+  "other_url_probes": [
+    {
+      "url": "http://100.108.186.69:50080/desktop/session/agent-zero-desktop/",
+      "authenticated_http": 307,
+      "anonymous_http": 401,
+      "available": false
+    },
+    {
+      "url": "http://100.108.186.69:50081/",
+      "anonymous_http": 302,
+      "authentication_verified": false
+    }
+  ],
+  "job": {
+    "context": "OzIMaV93",
+    "status": "artifact_verified_completed",
+    "running": false,
+    "artifact": {
+      "exists": true,
+      "content_matches": true,
+      "bytes": 21,
+      "sha256": "199dbe21722d2212d545a289a97402a81ec993f2e28e8f16c4d7fe9037e63fef",
+      "resolved_path": "/a0/usr/workdir/creator-studio-integration-3bc3bbfd92064f469a9fa132798e52b6/integration-verified.txt"
+    },
+    "response_path_verified": true,
+    "code_tool_actions": 1,
+    "preexisting_context_metadata_unchanged": true,
+    "recovery_required": true
+  },
+  "argus": {
+    "status": "not_connected",
+    "live_peer_requests_sent": false
+  },
+  "recommendation": {
+    "buttons": [
+      "Open worker",
+      "Copy task / manual handoff"
+    ],
+    "desktop_button": "Open worker UI; require manual Desktop activation, not a verified direct session",
+    "automatic_dispatch": "disabled"
+  },
+  "deployment": {
+    "native_unraid_templates_verified": true,
+    "candidate_port": 50082,
+    "candidate_port_not_listening": true,
+    "port_reserved": false,
+    "child_database": "separate SQLite; not created by this prototype",
+    "global_board_migration": false
+  },
+  "limitations": [
+    "Initial20s poll timeout; recovered same context without duplicate send",
+    "First artifact probe failed because python executable absent; corrected to python3",
+    "Pause is cooperative, not subprocess cancellation",
+    "Prompt tool/path limits are not enforced sandbox isolation",
+    "Automatic Agent Zero memory storage remains enabled",
+    "Desktop status healthy does not establish a live desktop; actual display unavailable",
+    "No actual browser desktop input tested in this task",
+    "No instance2 job or authenticated API test"
+  ],
+  "evidence": [
+    "live-verification.json",
+    "continuation-first-failure.json",
+    "continuation-verification.json",
+    "dedicated-trace.json",
+    "desktop-state.json",
+    "link-verification.json",
+    "deployment-facts.json"
+  ]
+}

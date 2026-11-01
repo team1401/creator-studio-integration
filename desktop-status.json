@@ -1,0 +1,39 @@
+{
+  "ok": true,
+  "healthy": true,
+  "state": "healthy",
+  "installing": false,
+  "missing": [],
+  "preparation": {
+    "preparing": false,
+    "active_count": 0,
+    "started_at": 1792619375.1480799,
+    "completed_at": 1792619376.0984197,
+    "result": {
+      "ok": true,
+      "skipped": false,
+      "removed": [],
+      "installed": [],
+      "migrated": [],
+      "warnings": [],
+      "errors": []
+    },
+    "error": ""
+  },
+  "binaries": {
+    "xpra": "/usr/bin/xpra",
+    "Xvfb": "/usr/bin/Xvfb",
+    "xfce4-session": "/usr/bin/xfce4-session",
+    "dbus-launch": "/usr/bin/dbus-launch",
+    "xrandr": "/usr/bin/xrandr",
+    "xdotool": "/usr/bin/xdotool",
+    "xsetroot": "/usr/bin/xsetroot",
+    "soffice": "/usr/bin/soffice",
+    "thunar": "/usr/bin/thunar",
+    "xfce4-terminal": "/usr/bin/xfce4-terminal",
+    "xfce4-settings-manager": "/usr/bin/xfce4-settings-manager",
+    "gio": "/usr/bin/gio"
+  },
+  "xpra_html_root": "/usr/share/xpra/www",
+  "message": "Agent Zero Desktop sessions are available."
+}

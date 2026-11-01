@@ -1,0 +1,65 @@
+{
+  "context": "OzIMaV93",
+  "original_failure_retained": "live-verification.json",
+  "initial_paused": true,
+  "resume_readback": true,
+  "running": false,
+  "error": "Strix read-only SSH operation failed",
+  "cleanup_paused": true,
+  "audit": [
+    {
+      "method": "POST",
+      "path": "/login",
+      "status": 302,
+      "seconds": 0.006
+    },
+    {
+      "method": "GET",
+      "path": "/api/csrf_token",
+      "status": 200,
+      "seconds": 0.002
+    },
+    {
+      "method": "POST",
+      "path": "/api/poll",
+      "status": 200,
+      "seconds": 0.004
+    },
+    {
+      "method": "POST",
+      "path": "/api/pause",
+      "status": 200,
+      "seconds": 0.002
+    },
+    {
+      "method": "POST",
+      "path": "/api/poll",
+      "status": 200,
+      "seconds": 0.004
+    },
+    {
+      "method": "POST",
+      "path": "/api/poll",
+      "status": 200,
+      "seconds": 0.004
+    },
+    {
+      "method": "POST",
+      "path": "/api/poll",
+      "status": 200,
+      "seconds": 0.011
+    },
+    {
+      "method": "POST",
+      "path": "/api/pause",
+      "status": 200,
+      "seconds": 0.005
+    },
+    {
+      "method": "POST",
+      "path": "/api/poll",
+      "status": 200,
+      "seconds": 0.005
+    }
+  ]
+}

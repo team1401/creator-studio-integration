@@ -1,0 +1,47 @@
+{
+  "links": [
+    {
+      "url": "http://100.108.186.69:50080/",
+      "authenticated_http": 200,
+      "anonymous_http": 302,
+      "available": true
+    },
+    {
+      "url": "http://100.108.186.69:50080/desktop/session/agent-zero-desktop/",
+      "authenticated_http": 307,
+      "anonymous_http": 401,
+      "available": false
+    },
+    {
+      "url": "http://100.108.186.69:50081/",
+      "anonymous_http": 302,
+      "authentication_verified": false
+    }
+  ],
+  "audit": [
+    {
+      "method": "POST",
+      "path": "/login",
+      "status": 302,
+      "seconds": 0.006
+    },
+    {
+      "method": "GET",
+      "path": "/api/csrf_token",
+      "status": 200,
+      "seconds": 0.002
+    },
+    {
+      "method": "GET",
+      "path": "/",
+      "status": 200,
+      "seconds": 0.002
+    },
+    {
+      "method": "GET",
+      "path": "/desktop/session/agent-zero-desktop/",
+      "status": 307,
+      "seconds": 0.001
+    }
+  ]
+}

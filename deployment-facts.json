@@ -1,0 +1,255 @@
+{
+  "containers": [
+    {
+      "name": "agent-zero-2",
+      "id": "973e9149c0b2d1fab8b956ff27c02262d31652dc86e7e2c5b23790987dd0a07b",
+      "status": "running",
+      "started_at": "2026-10-21T21:49:26.632852961Z",
+      "image": "agent0ai/agent-zero:latest",
+      "privileged": false,
+      "memory_bytes": 8589934592,
+      "nano_cpus": 4000000000,
+      "ports": {
+        "22/tcp": null,
+        "80/tcp": [
+          {
+            "HostIp": "100.108.186.69",
+            "HostPort": "50081"
+          }
+        ],
+        "9000/tcp": null,
+        "9001/tcp": null,
+        "9002/tcp": null,
+        "9003/tcp": null,
+        "9004/tcp": null,
+        "9005/tcp": null,
+        "9006/tcp": null,
+        "9007/tcp": null,
+        "9008/tcp": null,
+        "9009/tcp": null
+      },
+      "mounts": [
+        {
+          "Type": "bind",
+          "Source": "/mnt/fastssd/AppData/agent-zero-2/browser",
+          "Destination": "/a0/tmp/browser",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "bind",
+          "Source": "/mnt/fastssd/AppData/agent-zero-2/usr",
+          "Destination": "/a0/usr",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": "rprivate"
+        }
+      ],
+      "dockerman": "dockerman"
+    },
+    {
+      "name": "agent-zero-1",
+      "id": "26e79c6970c001fa57953945d08339b639c08579b04b4a7aa42c46f2f254eece",
+      "status": "running",
+      "started_at": "2026-10-21T21:49:26.394894494Z",
+      "image": "agent0ai/agent-zero:latest",
+      "privileged": false,
+      "memory_bytes": 8589934592,
+      "nano_cpus": 4000000000,
+      "ports": {
+        "22/tcp": null,
+        "80/tcp": [
+          {
+            "HostIp": "100.108.186.69",
+            "HostPort": "50080"
+          }
+        ],
+        "9000/tcp": null,
+        "9001/tcp": null,
+        "9002/tcp": null,
+        "9003/tcp": null,
+        "9004/tcp": null,
+        "9005/tcp": null,
+        "9006/tcp": null,
+        "9007/tcp": null,
+        "9008/tcp": null,
+        "9009/tcp": null
+      },
+      "mounts": [
+        {
+          "Type": "bind",
+          "Source": "/mnt/fastssd/AppData/agent-zero-1/browser",
+          "Destination": "/a0/tmp/browser",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "bind",
+          "Source": "/mnt/fastssd/AppData/agent-zero-1/usr",
+          "Destination": "/a0/usr",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": "rprivate"
+        }
+      ],
+      "dockerman": "dockerman"
+    },
+    {
+      "name": "qbittorrent",
+      "id": "6a7d5ad0e00e5bc878301f918bb32eb97c2c935d17e33544b4b71a2dddec7e16",
+      "status": "running",
+      "started_at": "2026-10-21T21:49:25.867763078Z",
+      "image": "lscr.io/linuxserver/qbittorrent"
+    },
+    {
+      "name": "syncthing",
+      "id": "cae2d000fd3e6fbd5fdff61a08b68fdc5d8aa1604d6239c3e7b7dae9c84d3bd8",
+      "status": "running",
+      "started_at": "2026-10-21T21:48:21.255821099Z",
+      "image": "lscr.io/linuxserver/syncthing"
+    },
+    {
+      "name": "prowlarr",
+      "id": "38f166d929f3fbe3bf41bb3367206aff6c38454f25e011d6273dce816e3a30bf",
+      "status": "running",
+      "started_at": "2026-10-21T21:48:20.988210273Z",
+      "image": "lscr.io/linuxserver/prowlarr"
+    },
+    {
+      "name": "proton-vpn",
+      "id": "a489a51def8d16a13741e72711201b4b68179626936c2b654a2cd66f6001822f",
+      "status": "running",
+      "started_at": "2026-10-21T21:48:25.613641303Z",
+      "image": "qmcgaw/gluetun:latest"
+    },
+    {
+      "name": "plex",
+      "id": "7a16c0ae8336d86cd12ee1fbe38e66055ef92579e47e4d35f35a033b6caa64e2",
+      "status": "running",
+      "started_at": "2026-10-21T21:48:21.221680432Z",
+      "image": "lscr.io/linuxserver/plex"
+    },
+    {
+      "name": "OpenClaw",
+      "id": "d84fd30acd5c1100d698822ba43d325d36bfcde1b7931ad63fa7e8ec15fc1d36",
+      "status": "running",
+      "started_at": "2026-10-21T21:48:25.271040304Z",
+      "image": "ghcr.io/openclaw/openclaw:latest"
+    },
+    {
+      "name": "Tunarr",
+      "id": "0b3eacd6f30567c9a85df7f84ef24e5f597da3af00c0a6e8a460a5a35de27961",
+      "status": "running",
+      "started_at": "2026-10-21T21:49:26.105129912Z",
+      "image": "ghcr.io/chrisbenincasa/tunarr:latest"
+    },
+    {
+      "name": "halogen-flash",
+      "id": "8c554a4e4643fb3a9913e4ad7c8541b6043d4b521db5f4a4e252a6ed98fa3016",
+      "status": "running",
+      "started_at": "2026-10-21T21:48:24.941746706Z",
+      "image": "ghcr.io/peonist-ai/halogen-flash-server@sha256:0c83ef1093520f0d5b5a00285e59e7ac6b85b1922917fc4a3df95ac5a2638cdd"
+    },
+    {
+      "name": "reframer",
+      "id": "be069c8853b74a0d51b0acf37b0a7debbefac03b520c81cca00ed127e232d17e",
+      "status": "exited",
+      "started_at": "2026-10-17T01:15:02.892528931Z",
+      "image": "python:3.12-slim"
+    },
+    {
+      "name": "sonarr",
+      "id": "cb12e7e3e5af81f0b82c07989356882e7a816ec30c701177357969f97be7448c",
+      "status": "running",
+      "started_at": "2026-10-21T21:48:20.589680507Z",
+      "image": "sha256:50297d3fca60aaa0852ccd221f1fbbd3326fdaca5fb0cb39aad58668f42af35a"
+    },
+    {
+      "name": "wd-backup-web",
+      "id": "3c0d639f82112fb40f47020d766a7829deb2b2faa5ec29efaaf707fc6702d611",
+      "status": "exited",
+      "started_at": "2026-10-19T00:36:50.449713822Z",
+      "image": "wd-backup-web"
+    },
+    {
+      "name": "immich-server",
+      "id": "9855aafc9062a88d0df28e293e832b4c704f9335ec27221e414d5264073b211f",
+      "status": "running",
+      "started_at": "2026-10-21T21:48:20.738324153Z",
+      "image": "ghcr.io/immich-app/immich-server:v3.3.1"
+    },
+    {
+      "name": "immich-machine-learning",
+      "id": "b8f9b8e3122e6eed28295fbc720e061cde7b17edfde158d16526d8838552ef86",
+      "status": "running",
+      "started_at": "2026-10-21T21:48:20.46284613Z",
+      "image": "ghcr.io/immich-app/immich-machine-learning:v3.3.1"
+    },
+    {
+      "name": "immich-postgres",
+      "id": "d553c5c00946ae5fbd38a6208915e5c52ef460c9fa737c1ed0af7455ba5e8e85",
+      "status": "running",
+      "started_at": "2026-10-21T21:48:21.039495666Z",
+      "image": "ghcr.io/immich-app/postgres:14-vectorchord0.4.3-pgvectors0.2.0"
+    },
+    {
+      "name": "radarr",
+      "id": "048f6797c1982d491f8d1c473830afd1f9cd961c0901e94380ed9d838d5a08be",
+      "status": "running",
+      "started_at": "2026-10-21T21:48:21.093913343Z",
+      "image": "sha256:d13ecd01819f9ccfa614f93f2add07418e13a0e92bb75236b67d3fe89424b13d"
+    },
+    {
+      "name": "big-bear-seerr",
+      "id": "47df2a960df4d0c6bcf4de5538ca5c292b8b0e10f8488cd12ac364d84dc138c8",
+      "status": "running",
+      "started_at": "2026-10-21T21:48:20.783288384Z",
+      "image": "ghcr.io/seerr-team/seerr:latest"
+    },
+    {
+      "name": "immich-redis",
+      "id": "0be3ac551ebeac03b6bb3c1b20c7d29764134293832763f6b54df48b81569453",
+      "status": "running",
+      "started_at": "2026-10-21T21:48:21.311214408Z",
+      "image": "docker.io/valkey/valkey:9"
+    }
+  ],
+  "listening_tcp_ports": [
+    22,
+    53,
+    80,
+    139,
+    443,
+    445,
+    2283,
+    3702,
+    5056,
+    5355,
+    5900,
+    7878,
+    8000,
+    8080,
+    8384,
+    8443,
+    8731,
+    8989,
+    9696,
+    16509,
+    18789,
+    22000,
+    32400,
+    32401,
+    32600,
+    37337,
+    39035,
+    50080,
+    50081,
+    61940
+  ],
+  "candidate_50082_not_listening": true,
+  "port_note": "Read-only observation, not reservation; recheck immediately before native deployment.",
+  "native": "both native templates present\nFilesystem      Size  Used Avail Use% Mounted on\n/dev/loop2       80G   31G   50G  38% /var/lib/docker\n/dev/nvme0n1p1  2.8T  461G  1.4T  25% /mnt/fastssd\n600 /mnt/fastssd/AppData/agent-zero-1/usr/.env\n",
+  "live_source": "v2.14\nfd447a2dc7a4501752bc6a9676b3c8873ea66dbff0329e4492a8aad07ac6d551  /a0/api/message_async.py\n39bbef40eb29074b6e7efc690d7bd7064edff6b45b1b0d1b570aab73ae4038e7  /a0/api/message.py\n663728c7f388aa99badbe5e79865ef3895a6b2e98719540a819b8826c04ace3c  /a0/api/poll.py\n74a3f55902dff77039a80ad753398634f24dee73de83190ce7ed90911315defe  /a0/api/pause.py\nf3947e627586eb6cb5f8d3d9b5b9e9b422d5bb9f3b371d407695e4fdf594d53e  /a0/api/chat_create.py\ne42a453b54f5ac709e791625df1bb4682d4c85875d5e9e4c0341a28eb3f78a52  /a0/api/csrf_token.py\n"
+}

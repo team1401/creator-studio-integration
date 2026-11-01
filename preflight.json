@@ -1,0 +1,38 @@
+{
+  "started_utc": "2026-10-22T15:55:05Z",
+  "argus": "not_connected",
+  "automatic_dispatch_ready": false,
+  "tested_instance": "agent-zero-1",
+  "contexts_before": [
+    {
+      "id": "30dgUMoC",
+      "running": false,
+      "paused": false,
+      "created_at": "2026-10-21T17:18:58.238222+00:00"
+    },
+    {
+      "id": "cC08syVL",
+      "running": false,
+      "paused": false,
+      "created_at": "2026-10-21T17:15:57.003735+00:00"
+    },
+    {
+      "id": "1wJgHpim",
+      "running": false,
+      "paused": false,
+      "created_at": "2026-10-21T17:13:36.229254+00:00"
+    },
+    {
+      "id": "QjEFT9FW",
+      "running": false,
+      "paused": false,
+      "created_at": "2026-10-21T17:03:09.529303+00:00"
+    },
+    {
+      "id": "PYc4jWNp",
+      "running": false,
+      "paused": false,
+      "created_at": "2026-10-21T15:38:36.333289+00:00"
+    }
+  ]
+}

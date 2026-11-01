@@ -1,0 +1,38 @@
+{
+  "ok": false,
+  "context_id": "OzIMaV93",
+  "display": ":120",
+  "profile_dir": "/a0/usr/plugins/_desktop/profiles/agent-zero-desktop",
+  "size": {
+    "width": 0,
+    "height": 0
+  },
+  "pointer": {
+    "x": 0,
+    "y": 0,
+    "screen": 0,
+    "window": 0
+  },
+  "active_window": null,
+  "windows": [],
+  "screenshot": {
+    "ok": false,
+    "path": "",
+    "format": "",
+    "captured_at": "",
+    "recent": false
+  },
+  "capabilities": {
+    "xdotool": "/usr/bin/xdotool",
+    "xrandr": "/usr/bin/xrandr",
+    "xwininfo": "/usr/bin/xwininfo",
+    "xprop": "/usr/bin/xprop",
+    "xwd": "/usr/bin/xwd",
+    "xclip": "/usr/bin/xclip"
+  },
+  "errors": [
+    "Can't open display :120",
+    "Error: Can't open display: (null)\nFailed creating new xdo instance",
+    "Error: Can't open display: (null)\nFailed creating new xdo instance"
+  ]
+}
