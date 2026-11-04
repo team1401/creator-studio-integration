@@ -5,7 +5,7 @@ from a0_client import A0Client
 ROOT=Path(__file__).parent
 
 def ssh(command):
-    r=subprocess.run(['ssh','-o','BatchMode=yes','-o','ConnectTimeout=10','root@100.108.186.69',command],capture_output=True,text=True,timeout=30)
+    r=subprocess.run(['ssh','-o','BatchMode=yes','-o','ConnectTimeout=10','root@<agent-zero-host>',command],capture_output=True,text=True,timeout=30)
     if r.returncode: raise RuntimeError('Strix read-only SSH operation failed')
     return r.stdout
 
@@ -31,7 +31,7 @@ v=json.loads(run(['/opt/homebrew/bin/bw','get','item','4534c9ae-e837-420c-9ad0-b
 assert v['name']=='Strix Agent Zero 1' and v.get('organizationId') and v.get('collectionIds')
 print(json.dumps({'username':v['login']['username'],'password':v['login']['password']}))
 '''
-    r=subprocess.run(['ssh','-o','BatchMode=yes','-o','ConnectTimeout=10','helix@100.117.95.108','/opt/homebrew/bin/python3 -c '+shlex.quote(remote)],input=json.dumps({'keychain_password':match[1]}),capture_output=True,text=True,timeout=190)
+    r=subprocess.run(['ssh','-o','BatchMode=yes','-o','ConnectTimeout=10','helix@<mac-host>','/opt/homebrew/bin/python3 -c '+shlex.quote(remote)],input=json.dumps({'keychain_password':match[1]}),capture_output=True,text=True,timeout=190)
     try:
         if r.returncode: raise ValueError()
         v=json.loads(r.stdout)
@@ -46,7 +46,7 @@ def save(name,obj):
     (ROOT/name).write_text(json.dumps(obj,indent=2)+'\n')
 
 def main():
-    client=A0Client('http://100.108.186.69:50080')
+    client=A0Client('http://<agent-zero-host>:50080')
     result={'started_utc':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'argus':'not_connected','automatic_dispatch_ready':False,'tested_instance':'agent-zero-1'}
     context=None
     try:

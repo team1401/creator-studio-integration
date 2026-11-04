@@ -5,7 +5,7 @@ import requests
 
 class A0Client:
     def __init__(self, base_url, budget=70, timeout=20):
-        if base_url != 'http://100.108.186.69:50080':
+        if base_url != 'http://<agent-zero-host>:50080':
             raise ValueError('Worker URL not allowlisted')
         self.base = base_url
         self.session = requests.Session()

@@ -32,8 +32,8 @@ Do not automatically retry `message_async` after a timeout: acknowledgement unce
 
 ## UI and desktop readiness
 
-- **Open worker:** `http://100.108.186.69:50080/` verified authenticated HTTP200; anonymous302 to login.
-- Worker2 `http://100.108.186.69:50081/` responds anonymous302; its authentication was not tested in this task.
+- **Open worker:** `http://<agent-zero-host>:50080/` verified authenticated HTTP200; anonymous302 to login.
+- Worker2 `http://<agent-zero-host>:50081/` responds anonymous302; its authentication was not tested in this task.
 - Desktop software status says healthy, but actual read-only desktop state says **Can't open display :120**, zero windows/geometry. Existing desktop route returns authenticated307, anonymous401. No desktop was started or changed. **There is no currently verified usable direct desktop link.** Do not display a green “desktop connected” indicator or invent an iframe URL. Prior pilot desktop success is historical, not current availability.
 
 Recommend **Open worker** plus **Copy task / manual handoff** now. An “Open worker desktop” control should currently open the worker UI with an explicit manual Desktop/start instruction, not promise a connected desktop. Supervised Send/Poll/Pause/Resume is prototype-proven; keep unattended automatic dispatch off until durable ownership, authorization, per-job budgets, artifact policies, uncertain-delivery recovery, and tool isolation are implemented. Argus = **not connected**; no readable live proof was established.

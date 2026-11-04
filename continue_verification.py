@@ -4,7 +4,7 @@ from verify_live import *
 def main():
     original=json.loads((ROOT/'live-verification.json').read_text())
     ctx=original['context']; path=original['artifact_path']
-    c=A0Client('http://100.108.186.69:50080',budget=45,timeout=40)
+    c=A0Client('http://<agent-zero-host>:50080',budget=45,timeout=40)
     c.login(**vault_login());c.owned.add(ctx)
     result={'context':ctx,'original_failure_retained':'live-verification.json'}
     try:

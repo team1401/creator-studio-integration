@@ -1,19 +1,19 @@
 {
   "links": [
     {
-      "url": "http://100.108.186.69:50080/",
+      "url": "http://<agent-zero-host>:50080/",
       "authenticated_http": 200,
       "anonymous_http": 302,
       "available": true
     },
     {
-      "url": "http://100.108.186.69:50080/desktop/session/agent-zero-desktop/",
+      "url": "http://<agent-zero-host>:50080/desktop/session/agent-zero-desktop/",
       "authenticated_http": 307,
       "anonymous_http": 401,
       "available": false
     },
     {
-      "url": "http://100.108.186.69:50081/",
+      "url": "http://<agent-zero-host>:50081/",
       "anonymous_http": 302,
       "authentication_verified": false
     }

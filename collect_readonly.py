@@ -3,7 +3,7 @@ from verify_live import *
 import requests
 
 def main():
-    c=A0Client('http://100.108.186.69:50080',budget=10)
+    c=A0Client('http://<agent-zero-host>:50080',budget=10)
     c.login(**vault_login())
     links=[]
     for path in ('/','/desktop/session/agent-zero-desktop/'):
@@ -13,11 +13,11 @@ def main():
         if r.status_code in (302,307) and path.startswith('/desktop/'):
             from urllib.parse import urlsplit, urljoin
             target=urlsplit(urljoin(c.base+path,r.headers.get('Location','')))
-            if target.netloc=='100.108.186.69:50080' and target.path.startswith('/desktop/') and not target.query:
+            if target.netloc=='<agent-zero-host>:50080' and target.path.startswith('/desktop/') and not target.query:
                 final=c.request('GET',target.path)
                 entry.update({'redirect_url':c.base+target.path,'final_http':final.status_code,'available':final.status_code==200})
         links.append(entry)
-    for url in ('http://100.108.186.69:50081/',):
+    for url in ('http://<agent-zero-host>:50081/',):
         r=requests.get(url,timeout=10,allow_redirects=False)
         links.append({'url':url,'anonymous_http':r.status_code,'authentication_verified':False})
     save('link-verification.json',{'links':links,'audit':c.audit})

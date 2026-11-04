@@ -13,7 +13,7 @@
         "22/tcp": null,
         "80/tcp": [
           {
-            "HostIp": "100.108.186.69",
+            "HostIp": "<agent-zero-host>",
             "HostPort": "50081"
           }
         ],
@@ -61,7 +61,7 @@
         "22/tcp": null,
         "80/tcp": [
           {
-            "HostIp": "100.108.186.69",
+            "HostIp": "<agent-zero-host>",
             "HostPort": "50080"
           }
         ],

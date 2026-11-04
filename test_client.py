@@ -3,9 +3,9 @@ from unittest.mock import Mock
 from a0_client import A0Client
 
 class AdapterSafetyTests(unittest.TestCase):
-    def setUp(self): self.c=A0Client('http://100.108.186.69:50080')
+    def setUp(self): self.c=A0Client('http://<agent-zero-host>:50080')
     def test_url_allowlist(self):
-        for url in ('http://evil.invalid','http://100.108.186.69:50081','file:///etc/passwd'):
+        for url in ('http://evil.invalid','http://<agent-zero-host>:50081','file:///etc/passwd'):
             with self.assertRaises(ValueError): A0Client(url)
     def test_existing_context_mutations_rejected(self):
         self.c.post=Mock()

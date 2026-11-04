@@ -10,7 +10,7 @@ assert final['artifact']['content_matches'] and final['verified']
 assert any(x.get('type')=='response' and x.get('content')==initial['artifact_path'] for x in trace['logs'])
 result={
  'schema_version':1,'verified_at_utc':__import__('datetime').datetime.now(__import__('datetime').timezone.utc).isoformat(),
- 'worker':{'id':'agent-zero-1','base_url':'http://100.108.186.69:50080','version':'v2.14','authentication':'server-side vault login session plus CSRF','api_family':'installed Web UI API'},
+ 'worker':{'id':'agent-zero-1','base_url':'http://<agent-zero-host>:50080','version':'v2.14','authentication':'server-side vault login session plus CSRF','api_family':'installed Web UI API'},
  'capabilities':{'authenticated_send':True,'poll':True,'dedicated_context_pause':initial['pause_verified'],'dedicated_context_resume':final['resume_readback'],'file_artifact_verified':final['verified'],'open_worker_ui':True,'desktop_software_installed':True,'live_desktop_available':False,'automatic_dispatch_ready':False,'supervised_dispatch_prototype_verified':True},
  'verified_urls':[x for x in links['links'] if x.get('available')],
  'other_url_probes':[x for x in links['links'] if not x.get('available')],

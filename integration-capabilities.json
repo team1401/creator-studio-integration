@@ -3,7 +3,7 @@
   "verified_at_utc": "2026-10-22T16:00:54.070639+00:00",
   "worker": {
     "id": "agent-zero-1",
-    "base_url": "http://100.108.186.69:50080",
+    "base_url": "http://<agent-zero-host>:50080",
     "version": "v2.14",
     "authentication": "server-side vault login session plus CSRF",
     "api_family": "installed Web UI API"
@@ -22,7 +22,7 @@
   },
   "verified_urls": [
     {
-      "url": "http://100.108.186.69:50080/",
+      "url": "http://<agent-zero-host>:50080/",
       "authenticated_http": 200,
       "anonymous_http": 302,
       "available": true
@@ -30,13 +30,13 @@
   ],
   "other_url_probes": [
     {
-      "url": "http://100.108.186.69:50080/desktop/session/agent-zero-desktop/",
+      "url": "http://<agent-zero-host>:50080/desktop/session/agent-zero-desktop/",
       "authenticated_http": 307,
       "anonymous_http": 401,
       "available": false
     },
     {
-      "url": "http://100.108.186.69:50081/",
+      "url": "http://<agent-zero-host>:50081/",
       "anonymous_http": 302,
       "authentication_verified": false
     }
